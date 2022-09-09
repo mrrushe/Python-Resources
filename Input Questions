@@ -1,0 +1,43 @@
+#Q1
+number1=int(input("Enter a number: "))
+number2=int(input("Enter another number: "))
+total = number1*number2
+print(total)
+
+
+#Q2
+height1 = float(input("Please enter height 1: "))
+height2 = float(input("Please enter height 2: "))
+height3 = float(input("Please enter height 3: "))
+avg = (height1+height2+height3)/3
+print(avg,"cm tall")
+
+#Q3
+bill=float(input("Please enter the bill: "))
+tip15=bill*0.15
+tip20=bill*0.2
+print(tip15)
+print(tip20)
+
+#Q4
+farenheit=float(input("Please enter the temperature in farenheit: "))
+celcius=(farenheit-32)*(5/9)
+print(farenheit,"in Farenheit is",celcius,"C")
+
+#Q5
+testscore=int(input("Please enter your score out of 35: "))
+result=testscore/35
+print("Your score was",int(result*100),"% in the test")
+
+#Q6
+pie=3.141592654
+radius=float(input("Please enter the radius of the circle: "))
+circumfrence = 2*pie*radius
+print(circumfrence)
+
+#Q7
+a=int(input("Please enter a number: "))
+b=int(input("Please enter a number: "))
+print("when the variables are swapped a=",b,"and b=",a)
+
+
