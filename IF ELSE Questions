@@ -1,0 +1,38 @@
+
+#Q1
+age = int(input("Please enter your age: "))
+if age>= 17:
+  print("You are old enough to drive!")
+else:
+  print("You are not old enough to drive!")
+
+
+#Q2
+password=input("Please enter the password to gain access: ")
+if password =="playstation":
+  print("The password is correct")
+else:
+  print("The password is wrong")
+
+#Q3
+point=0
+guess=str(input("What is the capital of Spain? "))
+if guess =="Madrid":
+  print("Correct")
+  point=point+1
+else:
+  print("Incorrect, the correct answer is Madrid")
+guess=str(input("What is the capital of Ireland? "))
+if guess =="Dublin":
+  print("Correct")
+  point=point+1
+else:
+  print("Incorrect, the correct answer is Dublin")
+guess=str(input("What is the capital of USA? "))
+if guess =="Washington":
+  print("Correct")
+  point=point+1
+else:
+  print("Incorrect, the correct answer is Washington")
+
+print("you have finished you have scored ",point,"out of 3")
