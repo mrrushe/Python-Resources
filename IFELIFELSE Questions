@@ -1,0 +1,66 @@
+#Q1
+number1 = int(input("Enter a number: "))
+number2 = int(input("Enter a second number: "))
+if number1> number2:
+  print(number1,"is larger")
+else:
+  print(number2,"is larger")
+
+#Q2
+score = int(input("Enter score: "))
+if score>=50:
+  print("PASS")
+  
+else:
+  print("FAIL")
+
+#Q3
+guess = int(input("Enter a number: "))
+magicNum = 7
+if guess<7:
+  print("TOO LOW")
+elif guess >7:
+  print("TOO HIGH")
+else:
+  print("CORRECT")
+
+#Q4
+number1 = int(input("Enter a number: "))
+sum=number1%2
+if sum ==1:
+  print("ODD")
+else:
+  print("EVEN")
+
+#Q5&6
+name=str(input("Please enter your name: "))
+if name == "John" or name == "Nora" or name == "Ceredig":
+  print("You are on the guestlist")
+elif name == "Amir" or name == "Costa" or name == "Tony":
+  print("Follow the red carpet to backstage")
+else:
+  print("Please join the audience in front of the stage")
+ 
+
+#Q7
+number=int(input("Enter a number: "))
+if number>0 and number<=10: #a)
+  print("A: TRUE")
+else:
+  print("A: FALSE")
+if number>=20 and number<30: #b)
+  print("B: FALSE")
+else:
+  print("B: TRUE")
+if (number%2)==1: #c)
+  print("C: TRUE")
+else:
+  print("C: FAlSE")
+if (number>=20 and number<30) or (number>=40 and number<50): #d)
+  print("D: TRUE")
+else:
+  print("D: FAlSE")
+if (number>=20 and number<30) or (number>=40 and number<50): #e)
+  print("E: FALSE")
+else:
+  print("E: TRUE")
