@@ -64,3 +64,62 @@ if (number>=20 and number<30) or (number>=40 and number<50): #e)
   print("E: FALSE")
 else:
   print("E: TRUE")
+
+#Q8
+x=int(input("Enter a value for x: "))
+y=int(input("Enter a value for y: "))
+if x>5 and y>5: #a)
+  print("A: TRUE")
+else:
+  print("A: FALSE")
+if x>6 or y>6: #b)
+  print("B: TRUE")
+else:
+  print("B: FALSE")
+if x<5 and y>=5: #c)
+  print("C: TRUE")
+else:
+  print("C: FALSE")
+if x<10 and y<10: #d)
+  print("D: TRUE")
+else:
+  print("D: FALSE")
+if x%2==0 and y%2==0: #e)
+  print("E: TRUE")
+else:
+  print("E: FALSE")
+if x%2==1 and y%2==1: #f)
+  print("F: TRUE")
+else:
+  print("F: FALSE")
+if (x>=5 and x<10) and (y>=10 and y<20): #e)
+  print("G: TRUE")
+else:
+  print("G: FALSE")
+
+#A)
+score = int(input("Enter score: "))
+if score>=80:
+  print("Excellent")
+elif score>=50 and score<80:
+  print("Good Work")
+elif score>=21 and score<50:
+  print("Dissapointing Result")
+else:
+  print("You need to try harder!")
+
+#B)
+score = int(input("Enter score: "))
+if score>=50:
+  print("PASS")
+  if score >=50 and score <80:
+    print("Good Work")
+  else:
+    print("Excellent")
+else:
+  print("FAIL")
+  if score >=0 and score <=20:
+    print("You need to try harder!")
+  else:
+    print("Dissapointing Result")
+    """
