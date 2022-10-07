@@ -1,0 +1,109 @@
+import random
+
+#Q1
+number=10
+while number>0:
+  print(number)
+  number=number-1
+
+#Q2
+number=1
+while number<11:
+  print(number*2)
+  number=number+1
+
+#Q3
+number=-50
+while number<51:
+  print(number)
+  number=number+1
+
+#Q4
+number=100
+while number>=0:
+  print(number)
+  number=number-10
+
+#Q5
+day = "Monday"
+#new_day=day.lower()
+answer = input("What day is it?  ")
+while answer!=day:
+  print("Incorrect, Try Again")
+  answer = input("What day is it?  ")
+print("Well done")
+
+#Q6 & 9 
+footballer="messi"
+count = 1
+answer = input("Who is the best footballer ever? ")
+while answer != footballer:
+  print("Try Again")
+  answer = input("Who is the best footballer ever? ")
+  count=count+1
+print("Well Done, it took you ",count, "trys")
+
+#Q7 & 10 
+maths_answer="4"
+count=1
+answer=input("What is 2 * 2? ")
+while answer != maths_answer and count<3:
+  print("Try Again")
+  answer = input("What is 2 * 2? ")
+  count=count+1
+if count>3:
+  print("Too many wrong attempts")
+else:
+  print("Well done")
+
+#Q8
+answer=input("Enter something: ")
+while answer != "bye":
+  print(answer)
+  answer=input("Enter something: ")
+print("bye")
+
+#Q11
+health = 10
+trolls = 0 
+damage = 3
+#changed != to >=
+while health >=0:
+  trolls = trolls+1
+  health = health-damage
+  print('Your hero swings and defeats an evil troll, but takes', damage, 'damage points')
+print('Your hero fought valiantly and defeated', trolls, 'trolls')
+print('But alas your hero is no more')
+
+#Q12 a and b
+count =1
+answer=input("Enter Password: ")
+while answer != "apple" and count<3:
+  print("Wrong entry, Try Again!")
+  count=count+1
+  answer=input("Enter Password: ")
+if answer!= "apple" and count==3:
+    print("Too many wrong attempts")
+else:
+    print("Accepted")
+
+#Q13
+number = 1
+while number<71:
+  print(number*number)
+  number+=1
+
+#Q14
+x = random.randint(1,100)
+answer=int(input("I am thinking of a number between 1 - 100. \nCan you guess what it is? "))
+count=1
+while answer!= x:
+  count +=1
+  if answer>x:
+    print("No, the number i am thinking of is less than",answer)
+    
+  else:
+    print("No, the number i am looking for is more than",answer)
+  answer = int(input("Can you guess what it is? "))
+  
+print("well done the answer was",x,", it took you",count,"trys")  
