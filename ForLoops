@@ -1,0 +1,42 @@
+import time
+
+#Q1
+for i in range(15):
+  print("Computing")
+
+#Q2
+letter = input("Enter a letter: ")
+number = int(input("Enter a number: "))
+for i in range(number):
+  print(letter)
+
+#Q3
+number=int(input("Enter a number to find its 10 times tables: "))
+for i in range(1,11):
+  print(i, "times",number," is: ",i*number)
+
+#Q4
+for i in range(2,51,2):
+  print(i)
+
+#Q5
+print("Number      Square of number")
+for i in range(0,13):
+  print(i,"        ",i*i)
+
+#Q6
+stars = int(input("Enter the number of stars you want: "))
+rows = int(input("Enter the number of rows you want: "))
+for i in range(rows):
+  print("*"*stars)
+
+#Q7
+range_entered=int(input("Enter a number: "))
+for i in range(1,(range_entered+1)):
+  print(i)
+
+#Q8
+for y in range(10,-1,-1):
+  print(y)
+  time.sleep(1)
+print("Blast off!")
