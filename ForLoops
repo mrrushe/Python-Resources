@@ -40,3 +40,67 @@ for y in range(10,-1,-1):
   print(y)
   time.sleep(1)
 print("Blast off!")
+
+#Ex4.3
+#Q1 
+vowels = "aeiouAEIOU"
+word=input("Enter input: ")
+new_word = ""
+for i in word: 
+  if i not in vowels: 
+    new_word += i
+  else:
+    continue 
+print(new_word)
+
+word=input("Enter input: ")
+new_word = ""
+for i in word: 
+  if i == "a": 
+    continue
+  elif i == "e":
+    continue
+  elif i == "i": 
+    continue
+  elif i == "o":
+    continue
+  elif i == "u": 
+    continue
+  else:
+    new_word+=i 
+print(new_word)
+
+#Q2
+string = input("Enter a string: ")
+new_string=""
+for i in string:
+  if i.isdigit() == False:
+    new_string+=i
+  else:
+    continue
+print(new_string)
+
+#Q3
+string = input("Enter a string: ")
+new_string=""
+for i in string:
+  if i=="a":
+    i=i.replace("a","x")
+    new_string+=i
+  else:
+    new_string+=i
+print(new_string)
+
+#Q4
+word=input("Enter input: ")
+new_word = ""
+for i in word: 
+    new_word = i + new_word
+print(new_word)
+
+#Q5
+word=input("Enter input: ")
+new_word = ""
+for i in range(0,len(word),2):
+  new_word +=word[i]
+print(new_word)
