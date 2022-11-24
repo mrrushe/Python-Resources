@@ -1,0 +1,91 @@
+#Q1
+aList=[123,'xyz','zara','abc'];
+aList.append(2009);
+print(aList)
+
+#Q2
+aList=[123,'xyz','zara','abc',123];
+print(aList.count('zara'))
+
+#Q3 a
+myarray=[45,65]
+myarray.extend('Hello')
+print(myarray)
+
+#Q3 B 
+aList=[123,'xyz','zara','abc',123];
+bList=[2009,'manni'];
+aList.extend(bList)
+print("Extended List: ",aList)
+
+#Q4
+aList=[123,'xyz','zara','abc',123];
+index=aList.index('xyz')
+print(index)
+
+#Q5
+aList=[123,'xyz','zara','abc'];
+aList.insert(3,2009)
+print("Final List: ",aList)
+
+#Q6
+aList=[123,'xyz','zara','abc'];
+print("A List : ",aList.pop())
+print("B List : ",aList.pop(2))
+print(aList)
+
+#Q8
+aList=[123,'xyz','zara','abc'];
+aList.remove('xyz')
+print(aList)
+
+#Q9
+aList=[123,'xyz','zara','abc','xyz'];
+aList.reverse()
+print(aList)
+
+#Q10
+aList=['123','xyz','zara','abc','xyz'];
+aList.sort();
+print("List: ",aList)
+
+#Q11
+list1, list2 = [123,'xyz','zara'],[456,'abc']
+print("First list length: ", len(list1));
+print("Second list length: ", len(list2));
+
+#Q12
+list1=[123,'xyz','zara','abc']
+list2=[456, 700, 200]
+print(min(list1))
+print(min(list2))
+
+#Q13
+found=False
+aList=[123,344,764,12,43]
+x=int(input("Please enter a number:"))
+if x in aList:
+  found=True
+else:
+  found=False
+print(found)
+
+#Q14
+squares = []
+for x in range(5):
+  squares.append(x**2)
+print(squares)
+
+#Q15
+cheeses=['etam','brie','cheddar','stilton']
+for x in range(len(cheeses)):
+  cheeses[x] = cheeses[x].upper() 
+print(cheeses)
+
+#Q16
+myarray=[]
+for x in [1,2,3]:
+  for y in [3,1,4]:
+    if x != y:
+      myarray.append([x,y])
+print(myarray)
