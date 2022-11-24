@@ -1,0 +1,42 @@
+
+with open('fileExample2.txt','w') as myFile:
+    myFile.write("I never saw a purple cow")
+    myFile.write("\n")
+    myFile.write("I hope I never see one")
+    myFile.write("\n")
+    myFile.write("But I can tell you anyhow")
+    myFile.write("\n")
+
+with open('fileExample2.txt','a') as myFile:
+    myFile.write("I'd rather see than be one!")
+    myFile.write("\n")
+    myFile.write("\n")
+    myFile.write("The Purple Cow by Gelett Burgess")
+    myFile.write("\n")
+
+with open('shopping.txt','r') as myFile:
+    line=myFile.readline()
+    while len(line)!=0:
+        print(line, end = '')
+        line= myFile.readline()
+
+with open('shopping.txt','r') as myFile:
+    items=myFile.read().split('\n')
+    print(items)
+   
+with open('shopping.txt','r') as myFile:
+    items = myFile.read().split('\n')
+    noOfItems = len(items)
+    print(noOfItems)
+
+
+with open('shopping.txt','r') as myFile:
+    items = myFile.read().split('\n')
+    items.remove('KITCHEN ROLL')
+    print(items)
+ 
+with open('shopping.txt','r') as myFile:
+    items = myFile.read().split('\n')
+    items.append('MILK')
+    items.append('\n')
+    print(items)
