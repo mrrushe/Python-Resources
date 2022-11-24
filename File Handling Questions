@@ -1,0 +1,60 @@
+import csv
+#Q1
+with open('names.txt','r') as myFile:
+    names=myFile.read().split('\n')
+    names.sort()
+    print(names)
+
+#Q2
+with open('shoppingList.txt','r') as myFile:
+    list=myFile.read().split('\n')
+    print(list)
+    
+remove=input("Would you like to remove any items? (Y or N): " )
+if remove == "Y":
+    remove = input("What would you like to remove? ")
+    list.remove(remove)
+ 
+add=input("Would you like to add any items? (Y or N): " )
+if add == "Y":
+    add = input("What would you like to add? ")
+    list.append(add)
+
+with open('shoppingList.txt','w') as myFile:
+    for x in list:
+        myFile.write(x)
+        myFile.write('\n')
+    
+print(list)
+
+#Q3
+with open('temps.csv','r') as myFile:
+    reader = csv.reader(myFile)
+    tempList=list(reader)
+    print(tempList)
+
+days = len(tempList)   
+tempsPerDay = 3
+total = 0
+lowList = []
+highList = []
+
+for x in tempList:
+    total= total+int(x[1])+int(x[2])+int(x[3])
+print(round((total/days)/tempsPerDay,2))
+    
+for z in tempList:
+    low= min(int(z[1]),int(z[2]),int(z[3]))
+    lowList.append(low)
+print(min(lowList))
+
+for y in tempList:
+    high= max(int(y[1]),int(y[2]),int(y[3]))
+    highList.append(high)
+print(max(highList))
+
+avgDayList=[]
+for i in tempList:
+    totalDay = int(i[1])+int(i[2])+int(i[3])
+    avgDayList.append(round(totalDay/tempsPerDay,2))
+print(avgDayList)
