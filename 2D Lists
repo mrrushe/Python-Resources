@@ -1,0 +1,57 @@
+import random
+#Q1
+avgday = 0
+avgmorn = 0
+arr=[]
+for i in range(5):
+    list = []
+    for j in range(1):
+        list.append(int(input('Enter morning temp: ')))
+        list.append(int(input('Enter evening temp: ')))
+    arr.append(list)
+print(arr)
+print('Highest temperature recorded was: ',max(max(x) for x in arr))
+print('Lowest temperature recorded was: ',min(min(x) for x in arr))
+avg = int(input("Average entered on specific day (1-5): "))-1
+for y in range(len(arr[avg])):
+    avgday += arr[avg][y]
+print(avgday/2)
+for x in range(len(arr)):
+    avgmorn += arr[x][0]
+print(avgmorn/len(arr))
+
+#Q2
+Student = ["Fred","Bob","Emma","Sean","Rio"]
+DoB = ["22/12/84", "01/01/01", "02/02/02", "03/03/03", "04/04/04"]
+
+def list_function():
+    search = input(f"Student's name (currently {len(Student)} availble, use list to see them all): ")
+    for x in range(len(Student)):
+        if search in Student[x]:
+          print(f"\nName: {Student[x].title()}          Date of Birth: {DoB[x]}\n\n")
+          return ()     
+        elif search == "list":
+          print(f"\nHere are the names currently availble: {Student}\n\n")
+          list_function()
+    else:
+      print("\nSorry the name cannot be found, try again\n\n")
+      list_function()
+  
+print(list_function())
+
+
+
+#Q3
+master = [["Ireland", "Dublin"], ["France", "Paris"], ["USA", "Washington"], ["Brazil", "Brazilia"], ["Spain", "Madrid"], ["England", "London"], ["Germany", "Berlin"], ["Japan", "Tokyo"]]
+def game():
+    score = 0
+    for x in range(0,5):
+        country = random.randint(0,len(master)-1)
+        answer = input(f"What is the capital on the country: {master[country][0]} : ")
+
+        if answer == master[country][1]:
+            score += 1
+        else:
+            print("Sorry that is wrong please try again")
+    print(f"You got {score} out of 5")
+game()
