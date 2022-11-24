@@ -1,0 +1,139 @@
+import random
+
+#Q1
+myList=[]
+for x in range(1,11):
+  myList.append(x)
+print(myList)
+
+#Q2
+myList=[]
+for x in range(6):
+  myList.append(random.randint(0,50))
+print(myList)
+
+#Q3
+myList=[55.5,44.6,89.8,44.7]
+def discount_ten(list):
+  newList=[]
+  for x in list:
+    newList.append(round(x*0.9,1))
+  return(newList)
+print(discount_ten(myList))
+
+#Q4
+myList=[23,6,5,8,9,0]
+def remove_five(list):
+  newList=[]
+  if 5 in list:
+    for x in list:
+      if x != 5:
+        newList.append(x)    
+    return(newList)
+  else:
+    return("Error, 5 is not in list")
+print(remove_five(myList))
+
+#Q5
+def nameList(list):
+  newlist=[]
+  name=input("Enter a name: ")
+  while name!="END":
+    newlist.append(name)
+    name=input("Enter a name: ")
+  return(newlist)
+print(nameList(list))
+
+#Q6
+duplist=[1,5,6,7,8,9]
+def has_duplicates(list):
+  for x in list:
+    if list.count(x)>1:
+      return ("List has duplicates")
+  return ("List does not have duplicates")  
+print(has_duplicates(duplist))
+
+#Q7
+ulist=[1,1,1,2,2,2,3,3,3,4]
+def unique_functions(list):
+  newlist=[]
+  for x in list:
+    if x in newlist:
+      continue
+    else:
+      newlist.append(x)
+  return(newlist)
+print(unique_functions(ulist))
+
+#Q8
+list=[1,2,3,4,5]
+def backways(list):
+  list.reverse()
+  return list
+print(backways(list))
+
+#Q9
+list=[12,13,14,10]
+def sum_list(list):
+  return(sum(list))
+print(sum_list(list))
+
+#Q10
+list=[12,13,14]
+def sum_list(list):
+  Sum = sum(list)
+  mean= Sum/len(list)
+  return(mean)
+print(sum_list(list))
+
+#Q11
+name = input("Please enter a name: ")
+newlist=[]
+reverselist=[]
+count=1
+while count !=6:
+  newlist.append(name)
+  reverselist.insert(0,name)
+  count+=1
+  name = input("Please enter a name: ")
+newlist.append(name)
+reverselist.insert(0,name)
+print(newlist)
+print(reverselist)
+
+#Q12
+x = random.randint(1,6)
+count=0
+newlist=[]
+while count<30:
+  newlist.append(x)
+  count+=1
+  x = random.randint(1,6)
+print(newlist)
+print ("Number of 1's: ","|"*newlist.count(1),newlist.count(1))
+print ("Number of 2's: ","|"*newlist.count(2),newlist.count(2))
+print ("Number of 3's: ","|"*newlist.count(3),newlist.count(3))
+print ("Number of 4's: ","|"*newlist.count(4),newlist.count(4))
+print ("Number of 5's: ","|"*newlist.count(5),newlist.count(5))
+print ("Number of 6's: ","|"*newlist.count(6),newlist.count(6))
+
+#Q13
+x = random.randint(1,49)
+newlist=[]
+while len(newlist)<6:
+  if x in newlist:
+    x = random.randint(1,49)
+    while x not in newlist:
+      newlist.append(x)
+  else:
+    newlist.append(x)
+print(newlist)
+
+newlist=[]
+while len(newlist)<6:
+  x = random.randint(1,49)
+  if x not in newlist:
+    newlist.append(x)
+  else:
+    continue
+print(newlist)
