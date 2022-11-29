@@ -1,0 +1,146 @@
+
+#Q1
+def Welcome(name):
+  print(f"Welcome {name}")
+  
+userName = input("Enter your name: ")
+Welcome(userName)
+
+#Q2
+def CreateInitials(forename,surname):
+  print(f"{forename[0]}{surname[0]}")
+
+fname=input("Please enter your forename: ")
+sname=input("Please enter your surname: ")
+CreateInitials(fname,sname)
+
+
+"""
+#Functions
+#Example
+def get_name():
+  name = input("Please enter your name: ")
+  return name
+
+def print_greeting(name):
+  print("Hello {name}, welcome to my greeting program.")
+
+name=get_name()
+print_greeting(name)
+
+#Return multiple Values
+
+def EnterNames():
+  name1=input("Please enter name 1: ")
+  name2=input("Please enter name 2: ")
+  name3=input("Please enter name 3: ")
+  return name1,name2,name3
+
+def EnterNamesList():
+  names= []
+  for i in range(3):
+    names.append(input("Please Enter a name: "))
+  return names
+
+def main():
+  
+  firstname,secondname,thirdname = EnterNames()
+  print("The firstname is "+firstname)
+  print("The secondname is "+secondname)
+  print("The thirdname is "+thirdname)
+  
+  addedNames=EnterNamesList()
+
+  for i in range(len(addedNames)):
+    print(f"Name {str(i+1)} = {addedNames[i]}")
+
+main()
+"""
+#Q1
+def Student():
+  sname = input("Enter your name: ")
+  return sname
+  
+def Teacher():
+  tname = input("Enter your teachers name: ")
+  return(tname)
+
+def Marks():
+  marks=[]
+  for i in range(4):
+    marks.append(int(input(f"Enter you score out of 10 for homework {i+1}: ")))
+  total = sum(marks)
+  average = total/len(marks)
+  return average
+
+def main():
+  student = Student()
+  teacher = Teacher()
+  avg = Marks()
+  
+  if avg >=8:
+    print(f"Well done {student}, {teacher} is very pleased with your effort")
+  elif avg >= 6:
+    print(f"Well done {student}, {teacher} thinks you should check your work more carefully")
+  else:
+    print(f"A dissapointing score {student}. {teacher} thinks you can do better")
+
+main()
+
+
+#Q2
+def home():
+  homeT = input("Enter the home team: ")
+  homeS = input(f"What did {homeT} score? ")
+  return homeT,homeS
+  
+  
+def away():
+  awayT = input("Enter the away team: ")
+  awayS = input(f"What did {awayT} score? ") 
+  return awayT,awayS
+    
+
+def main():
+  homeTeam = home() 
+  awayTeam = away()
+  
+  if homeTeam[1] > awayTeam[1]:
+    print(f"{homeTeam[0]} will score 3 points. {awayTeam[0]} will score 0.")
+  elif homeTeam[1] < awayTeam[1]:
+    print(f"{awayTeam[0]} will score 3 points. {homeTeam[0]} will score 0.")
+  else:
+    print(f"Both {homeTeam[0]} and {awayTeam[0]} will score 1 point")
+
+main()
+
+#Q3
+def openShopping():
+  with open('shoppingList.txt','r') as myFile:
+      slist=myFile.read().split('\n')
+      return slist
+
+def removeItem(slist,remove):
+  slist.remove(remove)
+  return slist
+
+def addItem(slist,add):
+  slist.append(add)
+  return slist
+
+def main():
+  slist = openShopping()
+  remove=input("Would you like to remove any items? (Y or N): " )
+  if remove == "Y":
+    remove = input("What would you like to remove? ")
+    removeItem(slist,remove)
+  add=input("Would you like to add any items? (Y or N): " )
+  if add == "Y":
+    add = input("What would you like to add? ")
+    addItem(slist,add)
+  with open('shoppingList.txt','w') as myFile:
+    for x in slist:
+      myFile.write('\n')
+      myFile.write(x)
+           
+main()
