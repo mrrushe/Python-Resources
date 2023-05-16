@@ -1,0 +1,48 @@
+# Question 16(a)
+# Name and School:
+
+line = open('shelley.txt','r')
+poem = line.readlines()
+line.close()
+lines = 0
+words = 0
+characters = 0
+blanks = 0
+
+for x in poem:
+    x = x.strip()
+    word = x.split()
+    if len(x) == 0:
+        blanks +=1
+    lines+=1
+    words += len(word)
+    characters += len(x)
+   
+def word_search(s_word):
+    found = 0
+    index = 0
+    blank = 0
+    
+    for y in poem:
+        index += 1
+        if s_word in y:
+            found = 1
+            break
+    for y in poem[0:index]:
+        y = y.strip()
+        if len(y) == 0:
+            blank += 1
+    
+    if found == 1:
+        print(f'The word: {s_word} was found at line {index-blank}')
+    else:
+        print(f'Word: {s_word} was not found')
+
+
+
+print('The poem has been read correctly by the program ')
+word_search(input('Enter a word to search: '))
+print(f'The last line is: "{poem[-1]}"')
+print(f'There are {lines-blanks} lines, {words} words and {characters} characters.')
+
+
